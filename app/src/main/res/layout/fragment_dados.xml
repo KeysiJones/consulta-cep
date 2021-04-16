@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kdev.consultacep.MainActivity">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kdev.consultacep.overview.DadosViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <android.widget.Toolbar
+            android:id="@+id/dados_toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00B37A"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textViewCep"
+            android:hint="CEP"
+            android:textSize="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{(viewModel.property.cep == null ? `Carregando...` : `CEP: ` + viewModel.property.cep)}"
+            app:layout_constraintBottom_toTopOf="@id/textViewLogradouro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textViewLogradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Logradouro"
+            android:textSize="20dp"
+            android:text="@{(viewModel.property.logradouro == null ? `Carregando...` : `Logradouro: ` + viewModel.property.logradouro)}"
+            app:layout_constraintBottom_toTopOf="@id/textViewLocalidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCep"
+            />
+
+        <TextView
+            android:id="@+id/textViewLocalidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Logradouro"
+            android:textSize="20dp"
+            android:text="@{(viewModel.property.localidade == null ? `Carregando...` : `Localidade: ` + viewModel.property.localidade)}"
+            app:layout_constraintBottom_toTopOf="@id/textViewUf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLogradouro"
+            />
+
+        <TextView
+            android:hint="Estado"
+            android:id="@+id/textViewUf"
+            android:textSize="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{(viewModel.property.uf == null ? `Carregando...` : `Estado: ` + viewModel.property.uf)}"
+            app:layout_constraintBottom_toTopOf="@id/textViewBairro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewLocalidade"
+            />
+
+        <TextView
+            android:id="@+id/textViewBairro"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Bairro"
+            android:text="@{(viewModel.property.bairro == null ? `Carregando...` : `Bairro: ` + viewModel.property.bairro)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUf"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

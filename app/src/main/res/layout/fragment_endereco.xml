@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kdev.consultacep.MainActivity"
+    xmlns:mask="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <android.widget.Toolbar
+            android:id="@+id/endereco_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00B37A"
+            android:textDirection="ltr"
+            android:navigationIcon="@drawable/ic_baseline_menu_24"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </android.widget.Toolbar>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:id="@+id/layoutCep"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/btnBuscar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*Informe o CEP"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/textViewCep"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
+                android:textSize="58dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                mask:allowed_chars="1234567890"
+                mask:mask="#####-###"
+                android:hint="xxxxxxxx"
+                app:keep_hint="true"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00B37A"
+            android:padding="10dp"
+            android:text="Buscar endereço"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutCep" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

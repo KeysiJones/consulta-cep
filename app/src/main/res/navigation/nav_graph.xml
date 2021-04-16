@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/enderecoFragment">
+
+    <fragment
+        android:id="@+id/enderecoFragment"
+        android:name="com.kdev.consultacep.overview.EnderecoFragment"
+        android:label="EnderecoFragment"
+        tools:layout="@layout/fragment_endereco">
+        <action
+            android:id="@+id/action_enderecoFragment_to_dadosFragment"
+            app:destination="@id/dadosFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_enderecoFragment_to_gridActivity"
+            app:destination="@id/gridActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dadosFragment"
+        android:name="com.kdev.consultacep.overview.DadosFragment"
+        android:label="DadosFragment"
+        tools:layout="@layout/fragment_dados">
+        <argument
+            android:name="cep"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/gridActivity"
+        android:name="com.kdev.consultacep.ui.OracaoPaoActivity"
+        android:label="activity_bread_prayer"
+        tools:layout="@layout/activity_oracao_pao" />
+</navigation>

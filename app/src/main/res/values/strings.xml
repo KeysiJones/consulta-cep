@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Consulta por CEP</string>
+    <string name="title_activity_endereco_navigation">EnderecoNavigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="sacrament_water_prayer">Ó Deus, Pai Eterno, nós te rogamos em nome de teu Filho, Jesus Cristo, que abençoes e santifiques esta agua para as almas de todos os que beberem dela, para que o façam em lembrança do sangue de teu Filho, que por eles foi derramado, e testifiquem a ti, ó Deus, Pai Eterno, que sempre se lembram dele, para que possam ter consigo o seu Espírito. Amém.</string>
+    <string name="sacrament_bread_prayer">Ó Deus, Pai Eterno, nós te rogamos em nome de teu Filho, Jesus Cristo, que abençoes e santifiques este pão para as almas de todos os que partilharem dele, para que o comam em lembrança do corpo de teu Filho e testifiquem a ti, ó Deus, Pai Eterno, que desejam tomar sobre si o nome de teu Filho e recordá-lo sempre e guardar os mandamentos que ele lhes deu, para que possam ter sempre consigo o seu Espírito. Amém.</string>
+</resources>
