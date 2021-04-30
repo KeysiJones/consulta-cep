@@ -29,13 +29,10 @@ class DadosViewModel : ViewModel() {
     /**
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
-//    init {
-//        fetchEnderecoFromApi("91520550")
-//    }
 
     fun fetchEnderecoFromApi(cep: String) {
 
-        var endereco : Endereco;
+        var endereco: Endereco;
 
         coroutineScope.launch {
             var getPropertiesDeferred = EnderecoApi.retrofitService.getEnderecoByCepAsync(cep)
@@ -48,19 +45,20 @@ class DadosViewModel : ViewModel() {
                 }
 
             } catch (t: Throwable) {
-                endereco = Endereco("564564654","564564654","564564654","564564654","564564654","564564654","564564654","564564654","564564654","564564654")
+                endereco = Endereco(
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654",
+                    "564564654"
+                )
                 println("********** MENSAGEM DE ERRO !!!: ${t.message} ***********")
             }
         }
-
     }
-
-    fun getCep() : String? {
-        return _property.value?.cep
-    }
-
-//    override fun onCleared() {
-//        super.onCleared()
-//        viewModelJob.cancel()
-//    }
 }
