@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.btn_grid_layout  -> {
                     Toast.makeText(this, "Gridiii", Toast.LENGTH_SHORT).show()
-                    //findNavController(R.id.nav_host_fragment).navigate()
                 }
 
                 R.id.menu_cancel_nav_view -> {

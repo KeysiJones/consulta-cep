@@ -14,9 +14,9 @@ class DadosViewModel : ViewModel() {
     // The internal MutableLiveData String that stores the status of the most recent request
     private val _status = MutableLiveData<String>()
 
-    // The external immutable LiveData for the request status String
-    val response: LiveData<String>
-        get() = _status
+//    // The external immutable LiveData for the request status String
+//    val response: LiveData<String>
+//        get() = _status
 
     private val _property = MutableLiveData<Endereco>()
 
@@ -45,18 +45,6 @@ class DadosViewModel : ViewModel() {
                 }
 
             } catch (t: Throwable) {
-                endereco = Endereco(
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654",
-                    "564564654"
-                )
                 println("********** MENSAGEM DE ERRO !!!: ${t.message} ***********")
             }
         }
