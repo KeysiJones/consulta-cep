@@ -40,10 +40,11 @@
                 android:textSize="20dp" />
 
             <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:textAlignment="center"
                 android:id="@+id/textViewCep"
                 android:layout_width="match_parent"
                 android:backgroundTint="@color/white"
-                android:textSize="58dp"
+                android:textSize="50dp"
                 android:inputType="number"
                 android:layout_height="wrap_content"
                 android:typeface="monospace"

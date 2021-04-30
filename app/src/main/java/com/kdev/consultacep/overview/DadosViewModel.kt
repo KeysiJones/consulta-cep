@@ -52,6 +52,11 @@ class DadosViewModel : ViewModel() {
                 println("********** MENSAGEM DE ERRO !!!: ${t.message} ***********")
             }
         }
+
+    }
+
+    fun getCep() : String? {
+        return _property.value?.cep
     }
 
 //    override fun onCleared() {
