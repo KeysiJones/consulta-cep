@@ -15,9 +15,6 @@
             app:destination="@id/dadosFragment"
             app:enterAnim="@anim/nav_default_pop_enter_anim"
             app:exitAnim="@anim/fragment_fade_exit" />
-        <action
-            android:id="@+id/action_enderecoFragment_to_gridActivity"
-            app:destination="@id/gridActivity" />
     </fragment>
 
     <fragment
@@ -29,9 +26,4 @@
             android:name="cep"
             app:argType="string" />
     </fragment>
-    <activity
-        android:id="@+id/gridActivity"
-        android:name="com.kdev.consultacep.ui.OracaoPaoActivity"
-        android:label="activity_bread_prayer"
-        tools:layout="@layout/activity_oracao_pao" />
 </navigation>

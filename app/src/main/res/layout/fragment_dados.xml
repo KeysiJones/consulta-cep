@@ -35,61 +35,66 @@
             />
 
         <TextView
-            android:id="@+id/textViewCep"
+            android:textAlignment="center"
+            android:id="@+id/cepText"
             android:hint="CEP"
             android:textSize="20dp"
             android:layout_marginTop="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{(viewModel.property.cep == null ? `Carregando...` : `CEP: ` + viewModel.property.cep)}"
-            app:layout_constraintBottom_toTopOf="@id/textViewLogradouro"
+            app:layout_constraintBottom_toTopOf="@id/logradouroText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             />
 
         <TextView
-            android:id="@+id/textViewLogradouro"
+            android:textAlignment="center"
+            android:id="@+id/logradouroText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Logradouro"
             android:textSize="20dp"
             android:text="@{(viewModel.property.logradouro == null ? `Carregando...` : `Logradouro: ` + viewModel.property.logradouro)}"
-            app:layout_constraintBottom_toTopOf="@id/textViewLocalidade"
+            app:layout_constraintBottom_toTopOf="@id/localidadeText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCep"
+            app:layout_constraintTop_toBottomOf="@+id/cepText"
             />
 
         <TextView
-            android:id="@+id/textViewLocalidade"
+            android:textAlignment="center"
+            android:id="@+id/localidadeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Logradouro"
             android:textSize="20dp"
             android:text="@{(viewModel.property.localidade == null ? `Carregando...` : `Localidade: ` + viewModel.property.localidade)}"
-            app:layout_constraintBottom_toTopOf="@id/textViewUf"
+            app:layout_constraintBottom_toTopOf="@id/ufText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLogradouro"
+            app:layout_constraintTop_toBottomOf="@+id/logradouroText"
             />
 
         <TextView
+            android:textAlignment="center"
             android:hint="Estado"
-            android:id="@+id/textViewUf"
+            android:id="@+id/ufText"
             android:textSize="20dp"
             android:layout_marginTop="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{(viewModel.property.uf == null ? `Carregando...` : `Estado: ` + viewModel.property.uf)}"
-            app:layout_constraintBottom_toTopOf="@id/textViewBairro"
+            app:layout_constraintBottom_toTopOf="@id/bairroText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewLocalidade"
+            app:layout_constraintTop_toBottomOf="@id/localidadeText"
             />
 
         <TextView
-            android:id="@+id/textViewBairro"
+            android:textAlignment="center"
+            android:id="@+id/bairroText"
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,7 +103,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewUf"
+            app:layout_constraintTop_toBottomOf="@+id/ufText"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

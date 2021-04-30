@@ -14,9 +14,9 @@ class DadosViewModel : ViewModel() {
     // The internal MutableLiveData String that stores the status of the most recent request
     private val _status = MutableLiveData<String>()
 
-    // The external immutable LiveData for the request status String
-    val response: LiveData<String>
-        get() = _status
+//    // The external immutable LiveData for the request status String
+//    val response: LiveData<String>
+//        get() = _status
 
     private val _property = MutableLiveData<Endereco>()
 
@@ -29,13 +29,10 @@ class DadosViewModel : ViewModel() {
     /**
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
-//    init {
-//        fetchEnderecoFromApi("91520550")
-//    }
 
     fun fetchEnderecoFromApi(cep: String) {
 
-        var endereco : Endereco;
+        var endereco: Endereco;
 
         coroutineScope.launch {
             var getPropertiesDeferred = EnderecoApi.retrofitService.getEnderecoByCepAsync(cep)
@@ -48,14 +45,8 @@ class DadosViewModel : ViewModel() {
                 }
 
             } catch (t: Throwable) {
-                endereco = Endereco("564564654","564564654","564564654","564564654","564564654","564564654","564564654","564564654","564564654","564564654")
                 println("********** MENSAGEM DE ERRO !!!: ${t.message} ***********")
             }
         }
     }
-
-//    override fun onCleared() {
-//        super.onCleared()
-//        viewModelJob.cancel()
-//    }
 }

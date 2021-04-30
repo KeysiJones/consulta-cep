@@ -3,10 +3,15 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 android {
 
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 
     compileSdkVersion 30
